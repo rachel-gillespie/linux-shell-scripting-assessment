@@ -3,23 +3,23 @@
 # Student ID: 20118715
 # Course: Higher Diploma in Computer Science
 # Description:
-# A script that adds a new employee record to employee.txt.
+# A script that adds a new contact record to contact.txt.
 # Validates each field before accepting it, and asks for confirmation before saving.
 
-# Check if employee.txt exists. If it does, confirm it's there; if not, create it with 'touch'
-[ -f ./employee.txt ] && echo "employee.txt exists" || touch ./employee.txt
+# Check if contact.txt exists. If it does, confirm it's there; if not, create it with 'touch'
+[ -f ./contact.txt ] && echo "contact.txt exists" || touch ./contact.txt
 
-echo "Add New Employee:"
+echo "Add New Contact:"
 
 # 'count' tracks how many valid fields have been collected (0–5)
 # The loop only advances count when valid input is entered, forcing re-entry on bad input
 count=0
 while [ $count -lt 5 ]
 do
-   # --- Step 1: Employee ID ---
+   # --- Step 1: Contact ID ---
    if [ $count -eq 0 ]
    then
-      echo "Enter Employee ID : "
+      echo "Enter Contact ID : "
       read id
 
       # Validate that ID contains only digits using a regex
@@ -28,7 +28,7 @@ do
          echo "Not a number, input a number please!"
 
       # Check if this ID already exists in the file by searching for it at the start of a line
-      elif grep -q "^$id " employee.txt
+      elif grep -q "^$id " contact.txt
       then
          echo "This ID already exists!"
 
@@ -37,10 +37,10 @@ do
       fi
    fi
 
-   # --- Step 2: Employee Name ---
+   # --- Step 2: Contact Name ---
    if [ $count -eq 1 ]
    then
-      echo "Enter Employee Name : "
+      echo "Enter Contact Name : "
       read name
 
       # Validate that name contains only letters and spaces
@@ -52,10 +52,10 @@ do
       fi
    fi
 
-   # --- Step 3: Employee Position ---
+   # --- Step 3: Contact Position ---
    if [ $count -eq 2 ]
    then
-      echo "Enter Employee Position : "
+      echo "Enter Contact Position : "
       read position
 
       # Validate that position contains only letters and spaces
@@ -104,7 +104,7 @@ echo $id "" $name "" $position "" $department "" $expenses " "
 echo "----------------------------------------------------------------------"
 
 # Ask for confirmation before writing to the file
-echo -n "Are you sure you want to add this employee (y/n) :"
+echo -n "Are you sure you want to add this contact (y/n) :"
 read answer
 
 if [[ "$answer" == "y" || "$answer" == "Y" ]]
@@ -113,10 +113,10 @@ then
    echo $id "" $name "" $position "" $department "" $expenses "" "added successfully"
    echo "----------------------------------------------------------------------"
 
-   # Append the new employee record to employee.txt
-   echo "$id $name $position $department €$expenses" >> employee.txt
+   # Append the new contact record to contact.txt
+   echo "$id $name $position $department €$expenses" >> contact.txt
 else
-   echo "Employee has not been added"
+   echo "Contact has not been added"
 fi
 
 echo
