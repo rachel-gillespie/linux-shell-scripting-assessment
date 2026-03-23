@@ -180,3 +180,64 @@ on surname only.
 - Developed on WSL Ubuntu — if running on a different system run the
   following to fix any line ending issues:
   sed -i 's/\r//' menu.sh add.sh search.sh remove.sh
+
+---
+
+## Research Resources
+
+The following topics were researched beyond the lecture notes to implement features in this project.
+
+---
+
+### ANSI Colour Codes
+Used to add colour to terminal output via variables like `RED`, `GREEN`, `CYAN` with `echo -e`.
+
+- [Nick Janetakis – Add ANSI Colors to Your Shell Scripts](https://nickjanetakis.com/blog/add-ansi-colors-to-your-shell-scripts-using-echo-printf-and-heredocs)
+- [FLOZz' MISC – Bash Colors & Formatting Reference](https://misc.flogisoft.com/bash/tip_colors_and_formatting)
+
+---
+
+### `select` Menu Construct
+Used in `menu.sh` to generate a numbered menu with `PS3` as the prompt.
+
+- [Linuxize – Bash select](https://linuxize.com/post/bash-select/)
+- [TLDP Bash Beginner's Guide – select](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_06.html)
+
+---
+
+### `[[ ]]` and `=~` Regex Matching
+Used in `add.sh` for input validation of phone numbers, email addresses, dates and times.
+
+- [Baeldung – Regex Inside If Clause in Bash](https://www.baeldung.com/linux/regex-inside-if-clause)
+- [How-To Geek – Double Bracket Conditional Tests](https://www.howtogeek.com/770617/how-to-use-double-bracket-conditional-tests-in-linux/)
+
+---
+
+### `printf` for Formatted Column Output
+Used in `menu.sh` and `remove.sh` to produce aligned tabular output with `%-Xs` format specifiers.
+
+- [Linuxize – Bash printf Command](https://linuxize.com/post/bash-printf-command/)
+- [Linux Handbook – Bash printf Examples](https://linuxhandbook.com/bash-printf/)
+
+---
+
+### `awk` `tolower()` for Case-Insensitive Search
+Used in `search.sh` and `remove.sh` to make name, department and status searches case-insensitive.
+
+- [GNU Awk Manual – Case Sensitivity](https://www.gnu.org/software/gawk/manual/html_node/Case_002dsensitivity.html)
+- [LinuxHint – 20 awk Examples](https://linuxhint.com/20_awk_examples/)
+
+---
+
+### `tr` for Case Conversion
+Used in `add.sh` to normalise the Status field to lowercase before comparison.
+
+- [nixCraft – Convert Uppercase to Lowercase in Bash](https://www.cyberciti.biz/faq/linux-unix-shell-programming-converting-lowercase-uppercase/)
+- [George Ornbo – tr Command Tutorial](https://shapeshed.com/unix-tr/)
+
+---
+
+### File and String Test Flags (`-f`, `-s`, `-z`)
+Used throughout to check if a file exists (`-f`), is non-empty (`-s`), or if a variable is blank (`-z`).
+
+- [GNU Bash Manual – Conditional Expressions](https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html)
