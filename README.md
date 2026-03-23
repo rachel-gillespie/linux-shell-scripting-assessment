@@ -5,11 +5,6 @@
 
 ---
 
-## Video Demonstration
-(https://setuo365-my.sharepoint.com/:v:/g/personal/20118715_setu_ie/IQDM-KneYJsDRryFcrqFNmwxAfxidJuEawKmr2Yq_umojmE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=gDbDfY)
-
----
-
 ## Project Overview
 This project is a Linux Bash Shell Scripting assessment which creates a
 Hospital Appointment Management System. The system allows users to manage
