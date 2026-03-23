@@ -241,3 +241,19 @@ Used in `add.sh` to normalise the Status field to lowercase before comparison.
 Used throughout to check if a file exists (`-f`), is non-empty (`-s`), or if a variable is blank (`-z`).
 
 - [GNU Bash Manual – Conditional Expressions](https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html)
+
+---
+
+### `sed` for Capitalising the First Letter
+Used in `add.sh` with `sed 's/./\u&/'` to capitalise the first letter of the Status field after normalising it to lowercase.
+
+- [LinuxHint – Change Case Using sed Command](https://linuxhint.com/change-case-using-sed-command/)
+- [LinuxReviews – Convert Text Between Uppercase and Lowercase](https://linuxreviews.org/HOWTO_convert_text_between_uppercase_and_lowercase_from_the_command_line)
+
+---
+
+### `IFS= read -r` for Safe Line Reading
+Used in the `display_results()` function in `search.sh` and `remove.sh` to loop through multi-line results without stripping whitespace or interpreting backslashes.
+
+- [nixCraft – Read a File Line By Line in Bash](https://www.cyberciti.biz/faq/unix-howto-read-line-by-line-from-file/)
+- [Greg's Wiki BashFAQ/001 – Reading Lines from a Variable](https://mywiki.wooledge.org/BashFAQ/001)
