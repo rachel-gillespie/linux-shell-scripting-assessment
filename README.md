@@ -5,11 +5,6 @@
 
 ---
 
-## Video Demonstration
-[Add your video URL here]
-
----
-
 ## Project Overview
 This project is a Linux Bash Shell Scripting assessment which creates a
 Hospital Appointment Management System. The system allows users to manage
