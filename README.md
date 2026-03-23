@@ -126,10 +126,6 @@ P001|John Murphy|0871234567|john.murphy@email.com|14 Oak Lane, Tralee|Kerry|15/0
   apply to the whole system rather than just a child process
 - $() syntax is used for command substitution throughout as per the
   tips sheet guidance
-- ANSI colour codes are used for UI colour schemes, referenced from:
-  ECMA International (1991) ECMA-48: Control Functions for Coded
-  Character Sets. Available at: https://www.ecma-international.org/
-  publications-and-standards/standards/ecma-48/
 
 ---
 
